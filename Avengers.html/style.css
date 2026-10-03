@@ -1,0 +1,904 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #08090d;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+header {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5, 6, 10, 0.95);
+    border-bottom: 1px solid rgba(255, 190, 70, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+header h2 span {
+    color: #e5a52d;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e5a52d;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 10% 70px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(4,5,9,0.98), rgba(4,5,9,0.65)),
+        radial-gradient(circle at 75% 45%, #542b20, #15151b 45%, #08090d 75%);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: 8%;
+    top: 25%;
+    border: 1px solid rgba(229,165,45,0.22);
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(229,165,45,0.08);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.tagline {
+    color: #e5a52d;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(48px, 8vw, 92px);
+    line-height: 1.1;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #e5a52d;
+    text-shadow: 0 0 25px rgba(229,165,45,0.25);
+}
+
+.intro {
+    color: #c3c3c3;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #e5a52d;
+    color: #08090d;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border: 1px solid #e5a52d;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #e5a52d;
+    transform: translateY(-3px);
+}
+
+/* ABOUT */
+.about, .heroes {
+    padding: 90px 10%;
+    text-align: center;
+}
+
+.about h2, .heroes h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #e5a52d;
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.about p, .heroes p {
+    max-width: 700px;
+    margin: auto;
+    color: #b9b9b9;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.heroes {
+    background: #101116;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #777777;
+    font-size: 12px;
+    border-top: 1px solid #25252a;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 150px 7% 70px;
+    }
+
+    .hero::after {
+        width: 250px;
+        height: 250px;
+        right: -90px;
+        top: 35%;
+    }
+
+    .tagline {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .intro {
+        font-size: 13px;
+    }
+
+    .about, .heroes {
+        padding: 65px 7%;
+    }
+}
+/* =========================
+   HEROES SECTION
+========================= */
+
+.section-title {
+    color: #e5a52d;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.heroes-intro {
+    margin-bottom: 45px !important;
+}
+
+.hero-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.hero-card {
+    padding: 30px 20px;
+    background: linear-gradient(145deg, #171920, #0c0d12);
+    border: 1px solid #292b32;
+    transition: 0.35s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #e5a52d;
+    top: 0;
+    left: -100%;
+    transition: 0.4s;
+}
+
+.hero-card:hover {
+    transform: translateY(-8px);
+    border-color: #e5a52d;
+    box-shadow: 0 15px 35px rgba(229, 165, 45, 0.12);
+}
+
+.hero-card:hover::before {
+    left: 0;
+}
+
+.hero-icon {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 2px solid #e5a52d;
+    color: #e5a52d;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.hero-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.hero-card p {
+    color: #85858a;
+    font-size: 13px;
+}
+
+.hero-card button {
+    margin-top: 18px;
+    padding: 9px 15px;
+    background: transparent;
+    border: 1px solid #555;
+    color: #ddd;
+    font-size: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.hero-card:hover button {
+    border-color: #e5a52d;
+    color: #e5a52d;
+}
+
+
+/* CHARACTER POPUP */
+
+.character-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+}
+
+.character-modal.active {
+    display: flex;
+}
+
+.modal-box {
+    width: min(600px, 100%);
+    padding: 45px;
+    background: #111319;
+    border: 1px solid #e5a52d;
+    position: relative;
+    box-shadow: 0 0 50px rgba(229, 165, 45, 0.12);
+}
+
+.modal-box h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #e5a52d;
+    margin-bottom: 20px;
+}
+
+.modal-box > p {
+    color: #bbb;
+    line-height: 1.8;
+}
+
+.character-info {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #292b32;
+}
+
+.character-info p {
+    margin: 10px 0;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.character-info strong {
+    color: #e5a52d;
+}
+
+.close-modal {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #e5a52d;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+    .hero-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-box {
+        padding: 30px 22px;
+    }
+}
+/* =========================
+   AVENGERS TIMELINE
+========================= */
+
+.timeline {
+    padding: 100px 10%;
+    background: #08090d;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #e5a52d;
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timeline .section-title {
+    text-align: center;
+    display: block;
+}
+
+.timeline-intro {
+    max-width: 700px;
+    margin: 0 auto 70px;
+    text-align: center;
+    color: #999;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.timeline-container {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+/* Vertical line */
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e5a52d;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(229, 165, 45, 0.35);
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 20px 45px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+/* Year circle */
+
+.timeline-year {
+    position: absolute;
+    top: 25px;
+    width: 65px;
+    height: 65px;
+    border: 2px solid #e5a52d;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #08090d;
+    color: #e5a52d;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+    right: -33px;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+    left: -33px;
+}
+
+/* Movie card */
+
+.timeline-content {
+    padding: 25px;
+    background: linear-gradient(145deg, #171920, #0c0d12);
+    border: 1px solid #292b32;
+    transition: 0.3s;
+}
+
+.timeline-content:hover {
+    border-color: #e5a52d;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(229, 165, 45, 0.12);
+}
+
+.timeline-content h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.timeline-content span {
+    color: #e5a52d;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .timeline {
+        padding: 80px 7%;
+    }
+
+    .timeline h2 {
+        font-size: 23px;
+    }
+
+    .timeline-container::before {
+        left: 25px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding: 20px 0 20px 70px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-year {
+        left: -7px;
+        right: auto;
+    }
+
+}
+/* =========================
+   INFINITY STONES
+========================= */
+
+.stones {
+    padding: 100px 10%;
+    background: #101116;
+    text-align: center;
+}
+
+.stones h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #e5a52d;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.stones-intro {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    color: #999;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.stones-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stone {
+    padding: 30px 20px;
+    background: #0b0c10;
+    border: 1px solid #292b32;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.stone span {
+    display: block;
+    font-size: 35px;
+    color: #e5a52d;
+    margin-bottom: 15px;
+}
+
+.stone strong {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.stone small {
+    display: block;
+    margin-top: 8px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.stone:hover {
+    transform: translateY(-7px);
+    border-color: #e5a52d;
+    box-shadow: 0 12px 30px rgba(229, 165, 45, 0.15);
+}
+
+.stone.active {
+    border-color: #e5a52d;
+    background: #171920;
+    box-shadow: 0 0 25px rgba(229, 165, 45, 0.18);
+}
+
+.stone-info {
+    max-width: 750px;
+    margin: 50px auto 0;
+    padding: 35px;
+    background: #0b0c10;
+    border: 1px solid #292b32;
+    text-align: left;
+}
+
+.stone-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #e5a52d;
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.stone-info > p:not(.section-title) {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.stone-details {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #292b32;
+    color: #e5a52d;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .stones {
+        padding: 80px 7%;
+    }
+
+    .stones h2 {
+        font-size: 23px;
+    }
+
+    .stones-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stone-details {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .stones-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   FINAL POLISH
+========================= */
+
+.hero-card,
+.timeline-item,
+.stone,
+.stone-info {
+    animation: archiveFade 0.8s ease both;
+}
+
+@keyframes archiveFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Smooth section spacing */
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Better button interaction */
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Footer upgrade */
+
+footer {
+    background: #050609;
+    padding: 30px;
+    letter-spacing: 1px;
+}
+/* =========================
+   DETAILED CHARACTER POPUP
+========================= */
+
+.character-modal .modal-box {
+    max-width: 750px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 45px;
+}
+
+.character-modal .modal-box h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.character-modal #modalDescription {
+    color: #aaa;
+    line-height: 1.9;
+    font-size: 14px;
+    margin: 25px 0;
+}
+
+.character-info {
+    border-top: 1px solid #292b32;
+    padding-top: 20px;
+}
+
+.character-info p {
+    margin: 12px 0;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.character-info strong {
+    color: #e5a52d;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.character-info span {
+    color: #fff;
+}
+/* =========================
+   MOVIE POPUP
+========================= */
+
+.movie-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    z-index: 9999;
+}
+
+.movie-modal.active {
+    display: flex;
+}
+
+.movie-modal-box {
+    width: 100%;
+    max-width: 750px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 45px;
+    background: linear-gradient(145deg, #171920, #090a0e);
+    border: 1px solid #e5a52d;
+    box-shadow: 0 0 40px rgba(229, 165, 45, 0.15);
+    position: relative;
+}
+
+.close-movie-modal {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.movie-modal-box h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #e5a52d;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: 15px 0 25px;
+}
+
+#movieDescription {
+    color: #aaa;
+    line-height: 1.9;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.movie-info {
+    border-top: 1px solid #292b32;
+    padding-top: 20px;
+}
+
+.movie-info p {
+    color: #aaa;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.movie-info strong {
+    color: #e5a52d;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.movie-info span {
+    color: white;
+}
+
+@media (max-width: 700px) {
+
+    .movie-modal {
+        padding: 15px;
+    }
+
+    .movie-modal-box {
+        padding: 35px 25px;
+        max-height: 85vh;
+    }
+
+    .movie-modal-box h2 {
+        font-size: 22px;
+    }
+
+    #movieDescription {
+        font-size: 13px;
+    }
+
+}
+/* Clickable Movie Cards */
+
+.timeline-content {
+    cursor: pointer;
+}
+
+.timeline-content::after {
+    content: "CLICK TO OPEN FILE";
+    display: block;
+    margin-top: 18px;
+    color: #e5a52d;
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.timeline-content:hover::after {
+    opacity: 1;
+}

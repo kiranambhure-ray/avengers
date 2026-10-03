@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avengers: The Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><header>
+    <h2>AVENGERS <span>ARCHIVE</span></h2>
+    <nav>
+        <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#heroes">Heroes</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#stones">Stones</a>
+</nav>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tagline">EARTH'S MIGHTIEST HEROES</p>
+        <h1>AVENGERS<br><span>ASSEMBLE</span></h1>
+        <p class="intro">A universe of heroes. One team. Countless stories.</p>
+        <a href="#about" class="btn">EXPLORE THE ARCHIVE</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>THE INITIATIVE</h2>
+    <p>When the world faces threats no hero can stand against alone, Earth's mightiest heroes unite to protect it.</p>
+</section>
+
+<section id="heroes" class="heroes">
+
+    <p class="section-title">THE AVENGERS INITIATIVE</p>
+
+    <h2>MEET THE HEROES</h2>
+
+    <p class="heroes-intro">
+        Explore the heroes who stood together when the world needed them most.
+    </p>
+
+    <div class="hero-grid">
+
+        <div class="hero-card" data-character="ironman">
+            <div class="hero-icon">IM</div>
+            <h3>IRON MAN</h3>
+            <p>Tony Stark</p>
+            <button>VIEW FILE</button>
+        </div>
+
+        <div class="hero-card" data-character="captain">
+            <div class="hero-icon">CA</div>
+            <h3>CAPTAIN AMERICA</h3>
+            <p>Steve Rogers</p>
+            <button>VIEW FILE</button>
+        </div>
+
+        <div class="hero-card" data-character="thor">
+            <div class="hero-icon">TH</div>
+            <h3>THOR</h3>
+            <p>God of Thunder</p>
+            <button>VIEW FILE</button>
+        </div>
+
+        <div class="hero-card" data-character="hulk">
+            <div class="hero-icon">HK</div>
+            <h3>HULK</h3>
+            <p>Bruce Banner</p>
+            <button>VIEW FILE</button>
+        </div>
+
+        <div class="hero-card" data-character="widow">
+            <div class="hero-icon">BW</div>
+            <h3>BLACK WIDOW</h3>
+            <p>Natasha Romanoff</p>
+            <button>VIEW FILE</button>
+        </div>
+
+        <div class="hero-card" data-character="hawkeye">
+            <div class="hero-icon">HE</div>
+            <h3>HAWKEYE</h3>
+            <p>Clint Barton</p>
+            <button>VIEW FILE</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Character popup -->
+<div class="character-modal" id="characterModal">
+
+    <div class="modal-box">
+
+        <button class="close-modal" id="closeModal">×</button>
+
+        <p class="section-title">CLASSIFIED FILE</p>
+
+        <h2 id="modalName">IRON MAN</h2>
+
+        <p id="modalDescription">
+            Character information
+        </p>
+
+        <div class="character-info">
+            <p><strong>Identity:</strong> <span id="modalIdentity"></span></p>
+            <p><strong>Abilities:</strong> <span id="modalAbilities"></span></p>
+            <p><strong>Role:</strong> <span id="modalRole"></span></p>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<!-- MOVIE TIMELINE -->
+
+<section id="timeline" class="timeline">
+
+    <p class="section-title">THE MARVEL CHRONICLES</p>
+
+    <h2>AVENGERS TIMELINE</h2>
+
+    <p class="timeline-intro">
+        Follow the journey of Earth's mightiest heroes through the major chapters of the MCU.
+    </p>
+
+    <div class="timeline-container">
+
+        <div class="timeline-item">
+            <div class="timeline-year">2008</div>
+            <div class="timeline-content" data-movie="ironman">
+                <h3>IRON MAN</h3>
+                <p>The beginning of Tony Stark's journey as Iron Man.</p>
+                <span>PHASE 1</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2012</div>
+            <div class="timeline-content" data-movie="avengers">
+                <h3>THE AVENGERS</h3>
+                <p>Earth's mightiest heroes unite for the first time.</p>
+                <span>PHASE 1</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content" data-movie="ultron"></div>
+                <h3>AGE OF ULTRON</h3>
+                <p>The Avengers face an artificial intelligence threat.</p>
+                <span>PHASE 2</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2018</div>
+            <div class="timeline-content" data-movie="infinitywar"></div>>
+                <h3>INFINITY WAR</h3>
+                <p>The Avengers face Thanos and the Infinity Stones.</p>
+                <span>PHASE 3</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2019</div>
+            <div class="timeline-content" data-movie="endgame">
+                <h3>ENDGAME</h3>
+                <p>The Avengers make their final stand against Thanos.</p>
+                <span>PHASE 3</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- INFINITY STONES -->
+
+<section id="stones" class="stones">
+
+    <p class="section-title">THE INFINITY ARCHIVE</p>
+
+    <h2>THE SIX STONES</h2>
+
+    <p class="stones-intro">
+        Six extraordinary forces. One universe. Explore the power behind the Infinity Saga.
+    </p>
+
+    <div class="stones-container">
+
+        <button class="stone" data-stone="space">
+            <span>✦</span>
+            <strong>SPACE</strong>
+            <small>TESSERACT</small>
+        </button>
+
+        <button class="stone" data-stone="mind">
+            <span>✦</span>
+            <strong>MIND</strong>
+            <small>VISION</small>
+        </button>
+
+        <button class="stone" data-stone="reality">
+            <span>✦</span>
+            <strong>REALITY</strong>
+            <small>AETHER</small>
+        </button>
+
+        <button class="stone" data-stone="power">
+            <span>✦</span>
+            <strong>POWER</strong>
+            <small>ORB</small>
+        </button>
+
+        <button class="stone" data-stone="time">
+            <span>✦</span>
+            <strong>TIME</strong>
+            <small>EYE OF AGAMOTTO</small>
+        </button>
+
+        <button class="stone" data-stone="soul">
+            <span>✦</span>
+            <strong>SOUL</strong>
+            <small>VORMIR</small>
+        </button>
+
+    </div>
+
+    <div class="stone-info" id="stoneInfo">
+
+        <p class="section-title">SELECTED ARTIFACT</p>
+
+        <h3 id="stoneName">SPACE STONE</h3>
+
+        <p id="stoneDescription">
+            Select an Infinity Stone above to access its classified information.
+        </p>
+
+        <div class="stone-details">
+            <span id="stoneLocation">LOCATION: UNKNOWN</span>
+            <span id="stonePower">POWER: UNKNOWN</span>
+        </div>
+
+    </div>
+
+</section>
+<!-- MOVIE POPUP -->
+
+<div class="movie-modal" id="movieModal">
+
+    <div class="movie-modal-box">
+
+        <button class="close-movie-modal" id="closeMovieModal">×</button>
+
+        <p class="section-title">CLASSIFIED MOVIE FILE</p>
+
+        <h2 id="movieName">IRON MAN</h2>
+
+        <p id="movieDescription">
+            Movie summary
+        </p>
+
+        <div class="movie-info">
+
+            <p>
+                <strong>Year:</strong>
+                <span id="movieYear"></span>
+            </p>
+
+            <p>
+                <strong>Phase:</strong>
+                <span id="moviePhase"></span>
+            </p>
+
+            <p>
+                <strong>Main Threat:</strong>
+                <span id="movieThreat"></span>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<footer>
+    <p>Fan-made project | Avengers: The Archive</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
